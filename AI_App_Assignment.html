@@ -7549,7 +7549,7 @@ I am working as a data analyst with Shvintech India LLP and my responsibility is
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [312]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [407]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> 
@@ -7614,7 +7614,7 @@ Reviews_shape: (99224, 7)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [313]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [408]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Checking missing_values values and duplicates</span>
@@ -7746,7 +7746,7 @@ The dataset is generally clean. missing_values values mainly appear in order del
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [314]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [409]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># removing duplicate reviews</span>
@@ -7793,7 +7793,7 @@ Only the first instance of each duplicate review id was kept, removing 814 dupli
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [315]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [410]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">orders</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> 
@@ -7830,7 +7830,7 @@ memory usage: 6.1+ MB
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[315]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[410]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>order_status
 delivered      96478
@@ -7865,7 +7865,7 @@ The order table contains several timestamps that shows different stages of the o
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="3.-Data-Preprocessing-and-Feature-Engineering">3. Data Preprocessing and Feature Engineering<a class="anchor-link" href="#3.-Data-Preprocessing-and-Feature-Engineering">¶</a></h2><p>First, convert the order dates into datetime format.</p>
+<h2 id="3.-Data-Preprocessing-and-Feature-Engineering">3. Data Preprocessing and Feature Engineering<a class="anchor-link" href="#3.-Data-Preprocessing-and-Feature-Engineering">¶</a></h2><p>Convert the order dates into datetime format.</p>
 </div>
 </div>
 </div>
@@ -7874,7 +7874,7 @@ The order table contains several timestamps that shows different stages of the o
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [316]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [411]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">date_columns_val</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">"order_purchase_timestamp"</span><span class="p">,</span> <span class="s2">"order_approved_at"</span><span class="p">,</span> <span class="s2">"order_delivered_carrier_date"</span><span class="p">,</span> <span class="s2">"order_delivered_customer_date"</span><span class="p">,</span> <span class="s2">"order_estimated_delivery_date"</span> <span class="p">]</span> 
@@ -7900,7 +7900,7 @@ The order table contains several timestamps that shows different stages of the o
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [317]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [412]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">products</span> <span class="o">=</span> <span class="n">products</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span> <span class="n">translation</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">"product_category_name"</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">"left"</span> <span class="p">)</span>
@@ -7927,7 +7927,7 @@ The order table contains several timestamps that shows different stages of the o
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [318]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [413]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">delivered_order</span> <span class="o">=</span> <span class="n">orders</span><span class="p">[</span><span class="n">orders</span><span class="p">[</span><span class="s2">"order_status"</span><span class="p">]</span><span class="o">==</span><span class="s2">"delivered"</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> 
@@ -7947,7 +7947,7 @@ The order table contains several timestamps that shows different stages of the o
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [319]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [414]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Creating analytical order-item dataset.</span>
@@ -8011,7 +8011,7 @@ This can support inventory, promotion and category-management decisions.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [320]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [415]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Dataset for sales analysis – includes all order statuses</span>
@@ -8108,7 +8108,7 @@ This analysis will help to identify periods of higher or lower sales and can sup
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [321]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [416]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">monthly_purchase</span> <span class="o">=</span> <span class="p">(</span> <span class="n">data_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"month"</span><span class="p">)</span> <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">revenue</span><span class="o">=</span><span class="p">(</span><span class="s2">"revenue"</span><span class="p">,</span><span class="s2">"sum"</span><span class="p">),</span> <span class="n">orders</span><span class="o">=</span><span class="p">(</span><span class="s2">"order_id"</span><span class="p">,</span><span class="s2">"nunique"</span><span class="p">))</span> <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span> <span class="p">)</span> 
@@ -8163,7 +8163,7 @@ Geographic analysis helps the business to find its strongest markets and see whe
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [322]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [417]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">state_wise_sales_data</span> <span class="o">=</span> <span class="p">(</span> <span class="n">data_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"customer_state"</span><span class="p">)</span> <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">revenue</span><span class="o">=</span><span class="p">(</span><span class="s2">"revenue"</span><span class="p">,</span><span class="s2">"sum"</span><span class="p">),</span> <span class="n">orders</span><span class="o">=</span><span class="p">(</span><span class="s2">"order_id"</span><span class="p">,</span><span class="s2">"nunique"</span><span class="p">))</span> <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"revenue"</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">)</span> 
@@ -8236,7 +8236,7 @@ Due to Late delivery, the customer can effect negatively. Understanding the rela
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [323]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [418]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">delivery_review_status</span> <span class="o">=</span> <span class="n">delivered_order</span><span class="p">[</span> <span class="p">[</span><span class="s2">"order_id"</span><span class="p">,</span><span class="s2">"delivery_days"</span><span class="p">,</span><span class="s2">"late"</span><span class="p">]</span> <span class="p">]</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">review</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s2">"order_id"</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s2">"inner"</span><span class="p">)</span> 
@@ -8303,7 +8303,7 @@ Seller performance is important because Olist operates as a marketplace. Identif
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [324]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [419]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">seller_rev_df</span> <span class="o">=</span> <span class="p">(</span> <span class="n">data_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"seller_id"</span><span class="p">)</span> <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">revenue</span><span class="o">=</span><span class="p">(</span><span class="s2">"revenue"</span><span class="p">,</span><span class="s2">"sum"</span><span class="p">),</span> <span class="n">orders</span><span class="o">=</span><span class="p">(</span><span class="s2">"order_id"</span><span class="p">,</span><span class="s2">"nunique"</span><span class="p">))</span> <span class="p">)</span> 
@@ -8375,7 +8375,7 @@ Revenue alone does not provide a complete picture of product performance. Catego
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [325]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [420]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Creating unique order-category combination</span>
@@ -8411,7 +8411,7 @@ Revenue alone does not provide a complete picture of product performance. Catego
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[325]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[420]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8509,7 +8509,7 @@ Revenue alone does not provide a complete picture of product performance. Catego
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [326]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [421]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">cat_review_filtered</span> <span class="o">=</span> <span class="n">cat_review_df</span><span class="p">[</span><span class="n">cat_review_df</span><span class="p">[</span><span class="s2">"reviews"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">]</span>
@@ -8549,7 +8549,7 @@ telephony                     4064  4.052165
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [327]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [422]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">cat_review_filtered</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)[</span><span class="s2">"score"</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
@@ -8598,7 +8598,7 @@ These are just patterns in the data, they do not prove why the scores are lower.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Business-Question-4.7-%E2%80%94-Are-expensive-freight-costs-associated-with-lower-customer-satisfaction?">Business Question 4.7 — Are expensive freight costs associated with lower customer satisfaction?<a class="anchor-link" href="#Business-Question-4.7-%E2%80%94-Are-expensive-freight-costs-associated-with-lower-customer-satisfaction?">¶</a></h3><p><strong>Business importance</strong>
-Freight is a significant part of the customer purchase experience. High shipping costs may affect perceived value and customer satisfaction.</p>
+Freight is a significant part of the customer purchase experience. The value of high shipping costs might affect perceived value and customer satisfaction.</p>
 </div>
 </div>
 </div>
@@ -8607,37 +8607,37 @@ Freight is a significant part of the customer purchase experience. High shipping
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [328]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [423]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># calculating total freight cost for each order</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># calculating total freight cost for every order</span>
 <span class="n">order_freight</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">data_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"order_id"</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s2">"freight_value"</span><span class="p">]</span>
     <span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="p">)</span>
 
-<span class="c1"># Merge total freight cost with customer review scores</span>
+<span class="c1"># merge total freight cost with customers review score</span>
 <span class="n">freight_review_df</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">order_freight</span>
     <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">review</span><span class="p">[[</span><span class="s2">"order_id"</span><span class="p">,</span> <span class="s2">"review_score"</span><span class="p">]],</span> <span class="n">on</span><span class="o">=</span><span class="s2">"order_id"</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">"inner"</span><span class="p">)</span>
     <span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s2">"order_id"</span><span class="p">)</span>
 <span class="p">)</span>
 
-<span class="c1"># Divide orders into four freight-cost groups</span>
-<span class="n">freight_bins</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span>
+<span class="c1"># divided orders into four freight group</span>
+<span class="n">freight_bins_val</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span>
     <span class="n">freight_review_df</span><span class="p">[</span><span class="s2">"freight_value"</span><span class="p">],</span>
     <span class="n">q</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">duplicates</span><span class="o">=</span><span class="s2">"drop"</span>
 <span class="p">)</span>
 
-<span class="c1"># Compare average review scores across freight-cost groups</span>
-<span class="n">freight_review_summary</span> <span class="o">=</span> <span class="p">(</span>
+<span class="c1"># comparing average review scores</span>
+<span class="n">freight_review_summary_val</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">freight_review_df</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">freight_bins</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s2">"review_score"</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">freight_bins_val</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s2">"review_score"</span><span class="p">]</span>
     <span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">freight_review_summary</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">freight_review_summary_val</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8669,7 +8669,7 @@ Name: review_score, dtype: float64
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Interpretation</strong>
-The results compare average customer review scores across four groups of total order freight costs. Review scores decrease as freight costs increase, this indicates a negative link between shipping cost and customer satisfaction. However, freight cost can also depend on factors such as product size, weight and delivery location, so the results do not prove that higher freight costs cause lower satisfaction.</p>
+Review scores decrease as freight costs goes up, that higher shipping costs are linked to lower customer satisfaction. However, freight cost can also depend on things like product size, weight and delivery location, so these results do not prove that higher freight costs cause lower satisfaction.</p>
 </div>
 </div>
 </div>
@@ -8690,7 +8690,7 @@ Shipping costs affect what customers pay. Higher shipping fees may reduced satis
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [329]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [424]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate total freight cost for each order</span>
@@ -8778,7 +8778,7 @@ The pearson correlation value is -0.0897, shows that a very weak negative relati
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Business-Question-4.9-%E2%80%94-Which-product-categories-get-better-reviews-in-different-states?">Business Question 4.9 — Which product categories get better reviews in different states?<a class="anchor-link" href="#Business-Question-4.9-%E2%80%94-Which-product-categories-get-better-reviews-in-different-states?">¶</a></h2><p><strong>Business Importance</strong>
-Olist can use this information to see where customers are happier or less happy. This helps the company improve product quality, work with better sellers, and fix delivery problems in certain areas.</p>
+Olist can use this information to see where customers are happier or less happy. This helps the company in improving product quality, to work with better sellers and fix delivery problems.</p>
 </div>
 </div>
 </div>
@@ -8787,10 +8787,10 @@ Olist can use this information to see where customers are happier or less happy.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [330]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [425]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create one unique order-category-state combination</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Creating one unique order category state combination</span>
 <span class="n">review_data</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">data_df</span><span class="p">[[</span><span class="s2">"order_id"</span><span class="p">,</span> <span class="s2">"category"</span><span class="p">,</span> <span class="s2">"customer_state"</span><span class="p">]]</span>
     <span class="o">.</span><span class="n">drop_duplicates</span><span class="p">([</span><span class="s2">"order_id"</span><span class="p">,</span> <span class="s2">"category"</span><span class="p">,</span> <span class="s2">"customer_state"</span><span class="p">])</span>
@@ -8801,7 +8801,7 @@ Olist can use this information to see where customers are happier or less happy.
     <span class="p">)</span>
 <span class="p">)</span>
 
-<span class="c1"># Select the top 10 categories based on number of orders</span>
+<span class="c1"># selected the top 10 categories based on number of orders</span>
 <span class="n">top_categories</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">review_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"category"</span><span class="p">)[</span><span class="s2">"order_id"</span><span class="p">]</span>
     <span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
@@ -8809,7 +8809,7 @@ Olist can use this information to see where customers are happier or less happy.
     <span class="o">.</span><span class="n">index</span>
 <span class="p">)</span>
 
-<span class="c1"># Select the top 10 states based on number of orders</span>
+<span class="c1"># selected the top 10 states based on number of orders</span>
 <span class="n">top_states</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">review_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"customer_state"</span><span class="p">)[</span><span class="s2">"order_id"</span><span class="p">]</span>
     <span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
@@ -8817,7 +8817,7 @@ Olist can use this information to see where customers are happier or less happy.
     <span class="o">.</span><span class="n">index</span>
 <span class="p">)</span>
 
-<span class="c1"># Create category-state average review score</span>
+<span class="c1"># Creating category-state average review score</span>
 <span class="n">heatmap_df</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">review_data</span><span class="p">[</span>
         <span class="n">review_data</span><span class="p">[</span><span class="s2">"category"</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">top_categories</span><span class="p">)</span> <span class="o">&amp;</span>
@@ -8829,7 +8829,7 @@ Olist can use this information to see where customers are happier or less happy.
 <span class="p">)</span>
 
 
-<span class="c1"># Plot heatmap</span>
+<span class="c1">#  heatmap</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
     <span class="n">heatmap_df</span><span class="p">,</span>
@@ -8869,7 +8869,7 @@ Olist can use this information to see where customers are happier or less happy.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Interpretation</strong>
-The heatmap shows the average customer review score for the main product categories in the main customer states. Green colours mean highe review scores with more customer satisfaction while red colours mean lower scores with lower satisfaction. This helps Olist quickly see which category–state pairs are doing well and which ones need attention.</p>
+The heatmap result indicate thet the average customer review score for the main product categories in the main customer states. Green colours mean highe review scores with more customer satisfaction while red colours mean lower scores with lower satisfaction. This helps Olist quickly see which category–state pairs are doing well and which ones need attention.</p>
 </div>
 </div>
 </div>
